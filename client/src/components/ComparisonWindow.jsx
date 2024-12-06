@@ -2,7 +2,7 @@ import React from "react";
 
 function ComparisonWindow({ comparison }) {
   return (
-    <div className="w-full mt-6 p-4 rounded-md shadow-md"
+    <div className="w-full mt-6 mb-6 p-4 rounded-md shadow-md"
     style={{
       background: "linear-gradient(to left, #4D194D, #3E1F47, #312244, #272640)",
     }}>
