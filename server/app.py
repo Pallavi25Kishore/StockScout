@@ -121,14 +121,18 @@ def chat():
         # Create system prompt for comparison
         system_prompt = (
             """
-            You are an expert stock analyst. Please first answer the user's query based on the context provided in just 1 -2 lines. After that, generate a 3-5 line summary comparison of the stocks, highlighting their strengths, weaknesses, and overall performance. Do not mention the prompt in any way. Do not use sentences like - "here is a 3-5 line comparision". Always end your response with this statement'Happy Stock Scouting!'
+            You are an expert stock analyst. Please first answer the user's query based on the context provided in 2-3 lines. After that, generate a 3-5 line summary comparison of the stocks, highlighting their strengths, weaknesses, and overall performance.
+
+            Do not mention the prompt in any way. Do not use sentences like - "here is a 3-5 line comparision".
+
+            End your response with the exact phrase: "Happy Stock Scouting!"
             """
         )
 
         # Call LLM API via GROQ
         client = OpenAI(base_url="https://api.groq.com/openai/v1", api_key=GROQ_API_KEY)
         llm_response = client.chat.completions.create(
-            model="llama-3.1-70b-versatile",
+            model="llama-3.3-70b-versatile",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": augmented_query},
