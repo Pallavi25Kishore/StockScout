@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import Tiles from "./Tiles";
 import ComparisonWindow from "./ComparisonWindow";
 import ChatWindow from "./ChatWindow";
 import Header from "./Header";
 import LeftPanel from "./LeftPanel";
+import TradingViewWidget from "./TradingViewWidget"
 
 function App() {
   const [query, setQuery] = useState("");
@@ -13,6 +14,10 @@ function App() {
     setQuery(inputText);
     setData(null)
   };
+
+  useEffect(() => {
+      findStocks();
+  }, [query]);
 
   const findStocks = async () => {
 
@@ -27,6 +32,7 @@ function App() {
 
       const result = await response.json();
       setData(result);
+      console.log(result);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -43,7 +49,7 @@ function App() {
         <LeftPanel />
 
         {/* Main Content */}
-        <div className="flex-1 p-4">
+        <div className="flex-1 p-6">
           <ChatWindow handleInput={handleInput} findStocks={findStocks} />
 
           {/* Render Tiles */}
@@ -53,7 +59,11 @@ function App() {
 
           {/* Render Comparison */}
           {data?.comparison && <ComparisonWindow comparison={data.comparison} />}
+          {/*Graphs*/}
+          {data?.companies && <TradingViewWidget companies={data.companies}/>}
         </div>
+
+
       </div>
     </div>
   );
