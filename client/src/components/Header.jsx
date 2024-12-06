@@ -1,4 +1,5 @@
 import React from "react";
+import TypingEffect from "react-typing-effect";
 
 function Header() {
   return (
@@ -8,7 +9,15 @@ function Header() {
         <div className="h-10 w-10 bg-[#212F45] rounded-full flex items-center justify-center">
           <span className="text-lg font-bold">$S</span>
         </div>
-        <h1 className="text-xl font-bold">StockScout</h1>
+        <h1 className="text-3xl font-bold">StockScout </h1>
+        <TypingEffect
+          text={["An AI-powered platform for stock exploration"]}
+          speed={200}
+          eraseSpeed={50}
+          eraseDelay={1000}
+          typingDelay={500}
+          className="italic text-sm"
+        />
       </div>
 
       {/* Navigation Links */}
