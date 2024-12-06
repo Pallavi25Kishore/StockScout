@@ -5,13 +5,12 @@ function ChatWindow({ handleInput, findStocks }) {
 
   const onSubmit = () => {
     handleInput(inputText); // Pass input to App's handler
-    findStocks(); // Trigger the stock fetch
   };
 
   return (
     <div className="w-full flex flex-col items-center">
       {/* Input Section with Button */}
-      <div className="w-full md:w-1/2 mt-6 relative">
+      <div className="w-full md:w-2/3 mt-6 relative">
         <textarea
           className="w-full h-32 p-4 text-gray-100 rounded-md resize-none"
           style={{
