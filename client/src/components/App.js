@@ -22,7 +22,8 @@ function App() {
   const findStocks = async () => {
 
     try {
-      const response = await fetch("http://localhost:5001/api/chat", {
+      // for local env use http://localhost:5001/api/chat
+      const response = await fetch("https://stockscout.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
