@@ -11,6 +11,11 @@ import logging
 app = Flask(__name__)
 CORS(app, origins=["https://stock-scout-eight.vercel.app", "http://localhost:3000"])
 
+@app.route("/", methods=["OPTIONS"])
+def index():
+    if request.method == "OPTIONS":
+        return '', 200  # Respond with HTTP 200 for preflight requests
+
 # Load environment variables
 load_dotenv()
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
