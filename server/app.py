@@ -8,6 +8,9 @@ from pinecone import Pinecone
 import os
 import logging
 
+app = Flask(__name__)
+CORS(app, origins=["https://stock-scout-eight.vercel.app", "http://localhost:3000"])
+
 # Load environment variables
 load_dotenv()
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
@@ -17,9 +20,6 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 if not PINECONE_API_KEY or not GROQ_API_KEY:
     raise ValueError("Missing PINECONE_API_KEY or GROQ_API_KEY in the environment variables.")
 
-# Initialize Flask app
-app = Flask(__name__)
-CORS(app)
 
 # Initialize logger
 logging.basicConfig(level=logging.INFO)
