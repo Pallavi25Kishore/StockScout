@@ -5,7 +5,7 @@
 StockScout is an AI-driven platform designed to simplify stock exploration and analysis using natural language queries. StockScout leverages technologies like Pinecone for semantic search and Llama 3.3 for intelligent responses within a Retrieval-Augmented Generation (RAG) workflow.
 
 <div align="center">
-<h3>CStockScout Dashboard</h3>
+<h3>StockScout Dashboard</h3>
  <img src="client/public/gif1.gif" alt="StockScout Dashboard gif" width="800px" />
  <img src="client/public/gif2.gif" alt="Gif 2" width="800px" />
 </div>
