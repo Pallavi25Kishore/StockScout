@@ -4,31 +4,11 @@
 ## :books:About
 StockScout is an AI-driven platform designed to simplify stock exploration and analysis using natural language queries. StockScout leverages technologies like Pinecone for semantic search and Llama 3.3 for intelligent responses within a Retrieval-Augmented Generation (RAG) workflow.
 
-<table align="center">
-
-  <tr>
-    <td colspan="3" align="center">
-      <h3>CStockScout Dashboard</h3>
-      <img src="client/public/gif1.gif" alt="StockScout Dashboard gif" width="600px" />
-    </td>
-  </tr>
- 
-  <tr>
-    <td align="center">
-      <img src="client/public/img1.jpg" alt="Image 1" width="200px" />
-    </td>
-    <td align="center">
-      <img src="client/public/img2.jpg" alt="Image 2" width="200px" />
-    </td>
-    <td align="center">
-      <img src="client/public/gif2.gif" alt="Gif 2" width="200px" />
-    </td>
-  </tr>
-
-
-</table>
-
-
+<div align="center">
+<h3>CStockScout Dashboard</h3>
+ <img src="client/public/gif1.gif" alt="StockScout Dashboard gif" width="600px" />
+ <img src="client/public/gif2.gif" alt="Gif 2" width="600px" />
+</div>
 
 ## :video_camera:Deployed App Demo on youtube
 <div align="center">
@@ -43,21 +23,21 @@ StockScout is an AI-driven platform designed to simplify stock exploration and a
 ![Static Badge](https://img.shields.io/badge/React-yellow?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/HTML%2FCSS-yellow?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/Tailwind-yellow?style=for-the-badge)
-![Static Badge](https://img.shields.io/badge/Typing-Effect-package-yellow?style=for-the-badge)
-![Static Badge](https://img.shields.io/badge/Trading-View-Widgets-yellow?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/TypingEffect-yellow?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/TradingViewWidgets-yellow?style=for-the-badge)
 
 ### Back-End 
 ![Static Badge](https://img.shields.io/badge/python-yellow?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/flask-yellow?style=for-the-badge)
 
 ### Other Tools/ Embedding + RAG + Generative AI 
-![Static Badge](https://img.shields.io/badge/Yahoo-Finance-API-yellow?style=for-the-badge)
-![Static Badge](https://img.shields.io/badge/Hugging-Face-Embeddings-yellow?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/YahooFinanceAPI-yellow?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/HuggingFaceEmbeddings-yellow?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/Pinecone-yellow?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/Langchain-yellow?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/Groq-yellow?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/Google%20colab-yellow?style=for-the-badge)
-![Static Badge](https://img.shields.io/badge/llama-3.3-70b-versatile-yellow?style=for-the-badge)
+![Static Badge](https://img.shields.io/badge/llama3.370bversatile-yellow?style=for-the-badge)
 
 ### Deployment
 ![Static Badge](https://img.shields.io/badge/vercel-yellow?style=for-the-badge)
