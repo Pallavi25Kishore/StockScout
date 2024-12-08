@@ -6,8 +6,8 @@ StockScout is an AI-driven platform designed to simplify stock exploration and a
 
 <div align="center">
 <h3>CStockScout Dashboard</h3>
- <img src="client/public/gif1.gif" alt="StockScout Dashboard gif" width="600px" />
- <img src="client/public/gif2.gif" alt="Gif 2" width="600px" />
+ <img src="client/public/gif1.gif" alt="StockScout Dashboard gif" width="800px" />
+ <img src="client/public/gif2.gif" alt="Gif 2" width="800px" />
 </div>
 
 ## :video_camera:Deployed App Demo on youtube
@@ -43,21 +43,18 @@ StockScout is an AI-driven platform designed to simplify stock exploration and a
 ![Static Badge](https://img.shields.io/badge/vercel-yellow?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/render-yellow?style=for-the-badge)
 
-## :gear: Features
+## :gear: Key Features
 
-![Static Badge](https://img.shields.io/badge/Customer%20Churn%20Prediction-purple) Predict churn probabilities using ML models
+![Static Badge](https://img.shields.io/badge/Semantic%20Search%20Querying-purple) Semantic search-based stock discovery for natural language queries.
 
-![Static Badge](https://img.shields.io/badge/Actionable%20Insights-purple) Detailed explanations of why a customer is at risk of churning, powered by Google’s Gemma2
+![Static Badge](https://img.shields.io/badge/Stock%20Analysis-purple) AI-generated query responses and stock comparisons.
 
-![Static Badge](https://img.shields.io/badge/Personalized%20Retention%20Strategies-purple) Automatically generate customer-specific emails to incentivize loyalty
+![Static Badge](https://img.shields.io/badge/Stock%20Metrics-purple) Interactive UI with stock cards showcasing details like market cap, revenue growth, etc.
 
-![Static Badge](https://img.shields.io/badge/Dynamic%20Dashboards-purple) Interactive visualizations including:
+![Static Badge](https://img.shields.io/badge/Stock%20Price%20Widget-purple) TradingView widget for real-time stock price graph
 
-![Static Badge](https://img.shields.io/badge/Speedometer-purple) Displays average churn probability
+![Static Badge](https://img.shields.io/badge/Top%20Stories%20Widget-purple) TradingView widget for real-time market news
 
-![Static Badge](https://img.shields.io/badge/Model%20Predictions-purple) Bar chart of churn probabilities from individual ML models
-
-![Static Badge](https://img.shields.io/badge/Customer%20Ranking-purple) Bar chart showing percentile rank among peers
 
 ## :rocket: Machine Learning Workflow
 
