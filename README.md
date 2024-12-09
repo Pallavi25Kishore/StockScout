@@ -56,32 +56,28 @@ StockScout is an AI-driven platform designed to simplify stock exploration and a
 ![Static Badge](https://img.shields.io/badge/Top%20Stories%20Widget-purple) TradingView widget for real-time market news
 
 
-## :rocket: Machine Learning Workflow
+## :rocket: RAG Workflow
 
-![Static Badge](https://img.shields.io/badge/Dataset-red) 
-  - Bank customer dataset from Kaggle
+![Static Badge](https://img.shields.io/badge/Data%20Ingestion-red) 
+  - Retrieved stock tickers from SEC, then fetched metadata via Yahoo Finance API.
+  - Used parallel processing for fetching stock data
+  - Implemented exponential backoff and ticker bucketing to handle Yahoo Finance API rate limits
 
-![Static Badge](https://img.shields.io/badge/Data%20Splitting-red) 
-  - The dataset was split into 80/20 ratio (80% for training and 20% for testing)
+![Static Badge](https://img.shields.io/badge/Embedding-red) 
+  - Use Hugging Face to embed stock descriptions (business summaries) and stored them in Pinecone.
 
-![Static Badge](https://img.shields.io/badge/Feature%20Engineering-red)  
-  - Performed feature selection, transformation, and creation to enhance the dataset
-  - Addressed class imbalance using SMOTE to oversample the minority class
+![Static Badge](https://img.shields.io/badge/Query%20Handling-red)  
+  - Embedded user query and conducted semantic similarity search (cosine similarity search) in Pinecone to find top 8 matches.
 
-![Static Badge](https://img.shields.io/badge/Models%20Trained-red) 
-  - XGBoost  
-  - k-Nearest Neighbors  
-  - Gradient Boosting  
-  - ExtraTrees  
-  - AdaBoost  
+![Static Badge](https://img.shields.io/badge/Response%20Generation-red) 
+  -  Leveraged Llama 3.3-70b-versatile to generate responses to queries and a comparision and analysis of the top 8 stocks based on the query. 
+ 
 
-![Static Badge](https://img.shields.io/badge/Ensembling%20Techniques-red)
-  - Implemented **voting classifiers**, **stacking**, and **bagging** to combine the strengths of multiple models and improve predictive performance 
+![Static Badge](https://img.shields.io/badge/UI%20Features-red)
+  - Embedded TradingView's real-time graphs and stock price detail widgets displayed using React components.
 
-![Static Badge](https://img.shields.io/badge/Performance%20Metrics-red)  
-  - **Accuracy**: 0.851500  
-  - **Recall**: 0.62
-  - In the context of ChurnGuard, recall is a critical metric because it measures the model's ability to correctly identify customers who are at risk of churning and the cost of false negatives is much higher than the cost of false positives
+![Static Badge](https://img.shields.io/badge/Deployment-red)
+  - Deployed web application using Render and Vercel
      
 ## :computer: Application Architecture
 
@@ -93,11 +89,13 @@ StockScout is an AI-driven platform designed to simplify stock exploration and a
  - Powered by **Flask**, which handles API services and integrates with AI tools
  - Deployed on **Render** for seamless performance
 
-![Static Badge](https://img.shields.io/badge/Integration%20with%20Generative%20AI-blue)
- - Google’s **Gemma2** generates:
-   - Explanations for churn predictions
-   - Personalized emails to incentivize at-risk customers
+![Static Badge](https://img.shields.io/badge/Data%20Storage-blue)
+ - Used Pinecone to store embedded stock descriptions
+ - Embeddings generated via Hugging Face
 
+![Static Badge](https://img.shields.io/badge/Integration%20with%20Generative%20AI-blue)
+ - Leveraged Llama 3.3 to generate responses to query and conduct relevant stock analysis
+   
 ## :sparkles:Getting Started
 ### Prerequisites
 ![Static Badge](https://img.shields.io/badge/npm-black)
@@ -108,18 +106,18 @@ StockScout is an AI-driven platform designed to simplify stock exploration and a
 ### Installation
 1. Clone the repo
 ```sh
-git clone https://github.com/Pallavi25Kishore/ChurnGuard.git
+git clone https://github.com/Pallavi25Kishore/StockScout.git
 ```
 
-2. Navigate to churn-prediction folder and install NPM packages
+2. Navigate to client folder and install NPM packages
 ```sh
-cd churn-prediction
+cd client
 npm install
 ```
 
-3. Navigate to src/App.js and change all fetch urls to http://localhost:5001 instead of public url for deployed backend on render 
+3. Navigate to client/src/components/App.js and change all fetch urls to http://localhost:5001 instead of public url for deployed backend on render 
 ```sh
-//fetch('https://churnguard-fb9w.onrender.com/..........')
+//fetch('https://stockscout.onrender.com/..........')
 fetch('http://localhost:5001/..........')
 ```
 
@@ -141,6 +139,7 @@ pip install -r requirements.txt
 7. Make a copy of the server/.exampleenv file and rename it to .env. Enter the following in the .env file
 ```sh
 GROQ_API_KEY=<groqapikey>
+PINECONE_API_KEY=<pineconeapikey>
 ```
 
 8. Navigate to server/app.py. Comment out and uncomment out the code such that the final code looks as follows:
